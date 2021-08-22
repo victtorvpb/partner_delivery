@@ -1,5 +1,6 @@
 # Partner Delivery
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0a02981365e545b9a4545f5c12fbb3a0)](https://app.codacy.com/gh/victtorvpb/partner_delivery?utm_source=github.com&utm_medium=referral&utm_content=victtorvpb/partner_delivery&utm_campaign=Badge_Grade_Settings)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Requirements
