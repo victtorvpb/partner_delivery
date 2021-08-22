@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  partner_delivery:
+    container_name: partner_delivery
+    entrypoint: sh run.sh
+    tty: true
+    stdin_open: true
+    image: container_partner_delivery:latest
+    build:
+      context: .
+    volumes:
+      - ./:/opt/app/partner_delivery/
+    ports:
+      - "5000:5000"
