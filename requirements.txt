@@ -11,6 +11,7 @@ charset-normalizer==2.0.4
 click==8.0.1
 colorama==0.4.4
 commitizen==2.18.0
+coverage==5.5
 decli==0.5.2
 distlib==0.3.2
 fastapi==0.68.0
@@ -35,6 +36,7 @@ pydantic==1.8.2
 pyflakes==2.3.1
 pyparsing==3.0.0b3
 pytest==6.2.4
+pytest-cov==2.12.1
 PyYAML==5.4.1
 questionary==1.10.0
 regex==2021.8.3
