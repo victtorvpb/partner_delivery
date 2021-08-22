@@ -28,7 +28,7 @@ test: setup_test
 	make exec COMMAND="pytest --cov=. --cov-config .coveragerc --cov-report xml"
 
 formatter:
-	make exec COMMAND="black . -S -v -t py38 --exclude '\alembic/' -l 100 "
+	make exec COMMAND="black . -S -v -t py38 --exclude '\alembic/ .venv/' -l 100 "
 	make pep8
 
 migrate:
