@@ -1,7 +1,7 @@
 SHELL=/bin/bash
 DOCKER_COMPOSE=docker-compose.yml
 SUDO=sudo
-CONTAINER_NAME=cash_back_plataform
+CONTAINER_NAME=partner_delivery
 
 install: build start
 	make exec COMMAND="python initial_data.py"
