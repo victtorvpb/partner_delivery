@@ -24,7 +24,7 @@ install-requirements:
 pep8:
 	make exec COMMAND="flake8 . --exit-zero"
 
-test: setup_test
+test:
 	make exec COMMAND="pytest --cov=. --cov-config .coveragerc --cov-report xml"
 
 formatter:
@@ -33,11 +33,6 @@ formatter:
 
 migrate:
 	make exec COMMAND="alembic upgrade heads"
-
-setup_test: start
-	make exec CONTAINER_NAME="service.postgres" COMMAND='psql -U tom -d postgres -c "DROP DATABASE IF EXISTS cashback_postgres_test;"'
-	make exec CONTAINER_NAME="service.postgres" COMMAND="psql -U tom -d postgres -c 'CREATE DATABASE  cashback_postgres_test;'"
-	make exec  COMMAND="alembic --name tests upgrade heads"
 
 coverage: test
 	make exec COMMAND="apt install curl -y"
