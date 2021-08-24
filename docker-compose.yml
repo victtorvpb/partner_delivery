@@ -5,6 +5,8 @@ services:
     container_name: partner_delivery
     entrypoint: sh run.sh
     tty: true
+    environment:
+      - SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://tom:tom123@service.postgres:5432/partner_delivery
     stdin_open: true
     image: container_partner_delivery:latest
     build:
@@ -15,7 +17,7 @@ services:
       - "5000:5000"
 
 
-  partner_delivery_postgres:
+  service.postgres:
     container_name: partner_delivery_postgres
     image: postgis/postgis
     volumes:
