@@ -21,7 +21,7 @@ services:
     container_name: partner_delivery_postgres
     image: postgis/postgis
     volumes:
-      - postgre-data-test:/var/lib/postgresql/data
+      - postgres:/var/lib/postgresql/data
     ports:
       - "5431:5432"
     environment:
@@ -30,4 +30,4 @@ services:
       - POSTGRES_DB=partner_delivery
 
 volumes:
-  postgre-data-test:
+  postgres:
